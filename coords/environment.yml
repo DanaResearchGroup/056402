@@ -1,0 +1,15 @@
+name: arc_env
+channels:
+  - defaults
+  - conda-forge
+dependencies:
+  - jupyter
+  - matplotlib >=1.5
+  - numpy >=1.10.0
+  - python >=3.7
+  - pyyaml
+  - rmg::rdkit >=2020.03.3.0
+  - conda-forge::py3dmol >= 0.8.0
+  - anaconda::ipython
+  - conda-forge::qcelemental
+  - math
