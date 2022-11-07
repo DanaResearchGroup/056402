@@ -13,3 +13,6 @@ dependencies:
   - anaconda::ipython
   - conda-forge::qcelemental
   - math
+  - conda-forge::ase >=3.15.0
+  - conda-forge::openbabel >= 3
+  - rmg::rdkit >=2020.03.3.0
