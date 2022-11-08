@@ -1,0 +1,73 @@
+1. Downloads
+   =========
+1.1. Download a Linux .iso File from https://ubuntu.com/
+     In the top menue click "Download", then select the green "22.04 LTS" version.
+     Save the .iso file in your Downloads folder.
+
+1.2. Download a Virtual Machine (VM) Software, here we'll use VirtualBox.
+     Go to https://www.virtualbox.org/wiki/Downloads
+     Click the "Windows hosts" link
+     Save the .exe file in your Downloads folder.
+
+2. Installation
+   ============
+
+2.1. Install the VirtualBox software using the "VirtualBox-7.0.2-154219-Win.exe" file you downloaded 
+     click on the Blue "*" button that says "New".
+     Give it a name, e.g., "Ubuntu"
+     Select an "ISO image" by clicking the down arrow at th eend of this line
+     and selecting "Other...". Point to the .iso file you downloaded (under your "Downloads" folder, and click "Open".
+     Click "Next"
+     Chose a username and password. Remember the password, you'll need it to access the OS and for installations.
+     Click "Next"
+     Allocate some memory (at least 4GB, allocate more if you can) and some CPUs, keep the selection in the green part of the scale.
+     Click "Next"
+     Allocate some disk space
+     Click "Next"
+     Click "Finish"
+	 The installation of Ubuntu will start immediately after clicking "Finish" as instructed above
+
+3. Set up your Ubuntu user
+   =======================
+  
+3.1. Click your username, and enter your password.
+3.2. You may "connect your online accounts", but you can also "Skip" this stage.
+3.3. You may set up "Livepatch" to keep Ubuntu up to date, but you can also skip this stage by clicking "Next".
+3.4. Advance through the "help improve Ubuntu" and Privacy / Location Services windows, and click "Done".
+3.5. Congratulations! You have Ubuntu installed. Welcome.
+
+4. Set up the basics
+   =================
+
+4.1. On the VM, download Anaconda for Linux using FireFox from: https://www.anaconda.com/download/
+4.2. While it downloads, open a terminal (Ctrl + Alt + T) and type:
+       sudo apt install git gcc g++ make
+     Type "Y" and enter to approve the installation
+4.3. Go to the Downloads folder ("cd Downloads") and install Anaconda:
+        bash Anaconda3-.....  # The filename is long, just type the start and hit "TAB" to auto-complete
+	 Press "Enter" many times to read the Licence Agreement, and yupe "yes" if you agree
+	 Hit "Enter" again to approve the default installation folder.
+	 After the installation is done type "yes" again to allow Anaconda to initialize.
+
+5. Install open-source software
+   ============================
+
+5.1. Open a NEW terminal using Ctrl + Alt + T (you can close the previous one)
+5.2. Create a Code directory:
+         mkdir Code
+5.3. Enter the Code directory
+         cd Code
+5.4. Download the installation script from:
+     https://github.com/DanaResearchGroup/056402/blob/main/scripts/install.sh
+	 by right-clicking the "Raw" button and saving this file
+5.3. Run the file you downloaded by typing in the folder you downloaded it to (e.g., "cd Downloads"):
+         bash install.sh
+
+6. Run Jupyter lab:
+   ================
+6.1. Execute the following command in a NEW terminal:
+         arce
+		 cd Code/ARC/ipython/Tools
+		 jupyter lab
+		 
+7. Enjoy!
