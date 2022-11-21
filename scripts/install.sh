@@ -33,7 +33,7 @@ python -c "import julia; julia.install(); import diffeqpy; diffeqpy.install()"
 julia -e 'using Pkg; Pkg.add(PackageSpec(name="ReactionMechanismSimulator",rev="main")); using ReactionMechanismSimulator;'
 
 # Install ARC's requirements.
-cd ../ARC/
-make install-all
+#cd ../ARC/
+#make install-all
 conda deactivate
 
