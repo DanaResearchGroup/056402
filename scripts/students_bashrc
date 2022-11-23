@@ -9,58 +9,38 @@ fi
 
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
-__conda_setup="$('/home/alon/miniconda3/bin/conda' 'shell.bash' 'hook' 2> /dev/null)"
+__conda_setup="$('/home/$USER/miniconda3/bin/conda' 'shell.bash' 'hook' 2> /dev/null)"
 if [ $? -eq 0 ]; then
     eval "$__conda_setup"
 else
-    if [ -f "/home/alon/miniconda3/etc/profile.d/conda.sh" ]; then
-        . "/home/alon/miniconda3/etc/profile.d/conda.sh"
+    if [ -f "/home/$USER/miniconda3/etc/profile.d/conda.sh" ]; then
+        . "/home/$USER/miniconda3/etc/profile.d/conda.sh"
     else
-        export PATH="/home/alon/miniconda3/bin:$PATH"
+        export PATH="/home/$USER/miniconda3/bin:$PATH"
     fi
 fi
 unset __conda_setup
 # <<< conda initialize <<<
 
-export rmgpy_path=/home/alon/Code/RMG-Py/
-export rmgdb_path=/home/alon/Code/RMG-database/
-export PYTHONPATH=$PYTHONPATH:/home/alon/Code/RMG-Py/
-export arc_path=/home/alon/Code/ARC/
-export PYTHONPATH=$PYTHONPATH:$arc_path
-export PYTHONPATH=$PYTHONPATH:/home/alon/Code/AutoTST/
-export PYTHONPATH=$PYTHONPATH:/home/alon/Code/KinBot/
-export PYTHONPATH=$PYTHONPATH:/home/alon/Code/TS-GCN/
+export rmgpy_path=/home/$USER/Code/RMG-Py/
+export rmgdb_path=/home/$USER/Code/RMG-database/
+export PYTHONPATH=$PYTHONPATH:/home/$USER/Code/RMG-Py/
 
 alias rc='source ~/.bashrc'
 alias rce='nano ~/.bashrc'
 alias erc='nano ~/.bashrc'
 
 alias rmge='conda activate rmg_env'
-alias arce='conda activate arc_env'
-alias tcke='conda activate tck_env'
-alias t3e='conda activate t3_env'
 alias deact='conda deactivate'
 
 alias rmgcode='cd $rmgpy_path'
 alias dbcode='cd $rmgdb_path'
-alias arcode='cd $arc_path'
-alias t3code='cd $t3_path'
 
 alias rmg='python-jl $rmgpy_path/rmg.py input.py  > >(tee -a stdout.log) 2> >(tee -a stderr.log >&2)'
 alias arkane='python-jl $rmgpy_path/Arkane.py input.py  > >(tee -a stdout.log) 2> >(tee -a stderr.log >&2)'
-alias arc='python $arc_path/ARC.py input.yml  > >(tee -a stdout.log) 2> >(tee -a stderr.log >&2)'
-alias arcrestart='python $arc_path/ARC.py restart.yml  > >(tee -a stdout.log) 2> >(tee -a stderr.log >&2)'
-alias restartarc='python $arc_path/ARC.py restart.yml  > >(tee -a stdout.log) 2> >(tee -a stderr.log >&2)'
-alias t3='python-jl $t3_path/T3.py input.yml  > >(tee -a stdout.log) 2> >(tee -a stderr.log >&2)'
 
 alias sb='qsub submit.sh'
 alias st='qstat -u $USER'
 
-alias tst='pytest -ra -vv'
 alias runs='cd /home/$USER/runs'
-export PYTHONPATH=$rmgpy_path:$PYTHONPATH
-export PATH=$rmgpy_path:$PATH 
-export PYTHONPATH=$arc_path:$PYTHONPATH
-export PATH=$arc_path:$PATH
-export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/home/alon/miniconda3/envs/sella_env/lib
 
