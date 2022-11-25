@@ -1,5 +1,3 @@
-bash
-
 # reset .bashrc
 cp /home/$USER/.bashrc /home/$USER/.bashrc_backup_1
 rm /home/$USER/.bashrc
@@ -13,6 +11,7 @@ source $CONDA_BASE/etc/profile.d/conda.sh
 source ~/.bashrc
 
 conda remove --name arc_env --all -y
+conda remove --name rmg_env --all -y
 
 cd /home/$USER
 mkdir Code
