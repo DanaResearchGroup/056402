@@ -1,6 +1,7 @@
 # reset .bashrc
 cp /home/$USER/.bashrc /home/$USER/.bashrc_backup_1
 rm /home/$USER/.bashrc
+rm /home/$USER/students_bashrc
 wget /home/$USER https://raw.githubusercontent.com/DanaResearchGroup/056402/main/scripts/students_bashrc
 cp /home/$USER/students_bashrc /home/$USER/.bashrc
 source ~/.bashrc
@@ -12,6 +13,13 @@ source ~/.bashrc
 
 conda remove --name arc_env --all -y
 conda remove --name rmg_env --all -y
+
+cd /home/$USER
+mkdir runs
+cd runs
+mkdir example
+cd example
+wget . https://raw.githubusercontent.com/DanaResearchGroup/056402/main/RMG%20input%20files/1_minimal/input.py
 
 cd /home/$USER
 mkdir Code
