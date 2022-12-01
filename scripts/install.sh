@@ -32,7 +32,7 @@ git clone https://github.com/ReactionMechanismGenerator/RMG-database.git
 cd RMG-Py
 conda env create -f environment.yml
 source ~/.bashrc
-conda activate arc_env
+conda activate rmg_env
 make
 python -c "import julia; julia.install(); import diffeqpy; diffeqpy.install()"
 julia -e 'using Pkg; Pkg.add(PackageSpec(name="ReactionMechanismSimulator",rev="main")); using ReactionMechanismSimulator;'
